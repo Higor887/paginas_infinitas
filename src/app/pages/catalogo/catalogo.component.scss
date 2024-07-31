@@ -1,0 +1,53 @@
+/* header.component.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  }
+  
+  
