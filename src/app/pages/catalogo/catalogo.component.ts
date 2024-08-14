@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faArrowRightToBracket} from '@fortawesome/free-solid-svg-icons';
 
 declare var PhotoSphereViewer: any;
 
@@ -7,8 +8,14 @@ declare var PhotoSphereViewer: any;
   templateUrl: './catalogo.component.html',
   styleUrl: './catalogo.component.scss'
 })
-export class Catalogocomponent implements OnInit{
-  books =}
+export class CatalogoComponent{
+
+  //Icones
+  faLogin = faArrowRightToBracket;
+
+
+}
+
 
 
   

@@ -48,6 +48,119 @@ header {
     .menu-icon {
       display: flex;
     }
+    
+  
+
   }
+
+    /* header.component.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e2a38; /* Um tom mais escuro de azul para o fundo */
+  color: #f5f5f5; /* Texto claro para contraste */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  position: relative;
+}
+
+.logo {
+  font-size: 1.8rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  color: #f5f5f5;
+  text-transform: uppercase; /* Torna o texto em maiúsculas */
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-out; /* Transição suave para a altura do menu */
+}
+
+nav ul.collapsed {
+  max-height: 0; /* Esconde o menu quando colapsado */
+  overflow: hidden;
+}
+
+nav ul.expanded {
+  max-height: 300px; /* Ajuste conforme necessário */
+}
+
+nav ul li {
+  margin-left: 2rem; /* Espaçamento maior entre os itens */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1rem; /* Tamanho de fonte ajustado */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Cor de destaque ao passar o mouse */
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 30px; /* Largura aumentada */
+  height: 3px;
+  background: #f5f5f5;
+  margin: 5px 0; /* Espaçamento maior entre as linhas */
+  transition: background 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+  background: #f5f5f5;
+}
+
+.menu-icon span:nth-child(2) {
+  background: #f5f5f5;
+}
+
+.menu-icon span:nth-child(3) {
+  background: #f5f5f5;
+}
+
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Transforma a primeira linha */
+  }
+
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0; /* Torna a segunda linha invisível */
+  }
+
+  .menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Transforma a terceira linha */
+  }
+
+  nav ul.expanded {
+    display: flex;
+  }
+
   
   

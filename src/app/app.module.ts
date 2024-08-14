@@ -7,6 +7,8 @@ import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { CatalogocomponentComponent } from './catalogocomponent/catalogocomponent.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { CatalogocomponentComponent } from './catalogocomponent/catalogocomponen
     AppComponent,
     CatalogoComponent,
     HomeComponentComponent,
-    CatalogocomponentComponent
+    CatalogocomponentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
