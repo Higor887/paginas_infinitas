@@ -114,10 +114,10 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.menu-icon span {
+.menu-icon {
   width: 30px; /* Largura aumentada */
   height: 3px;
-  background: #f5f5f5;
+  color: #f5f5f5;
   margin: 5px 0; /* Espaçamento maior entre as linhas */
   transition: background 0.3s ease;
 }
