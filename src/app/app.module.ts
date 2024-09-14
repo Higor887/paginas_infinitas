@@ -10,6 +10,8 @@ import { CatalogocomponentComponent } from './catalogocomponent/catalogocomponen
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CatalogoComponent,
     HomeComponentComponent,
     CatalogocomponentComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
