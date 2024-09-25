@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
 import { CadProdutoComponent } from './cad-produto/cad-produto.component';
+import { MovProdutoComponent } from './mov-produto/mov-produto.component';
 
 const routes: Routes = [
   {path:'', redirectTo:"catalogo", pathMatch:'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
    {path:'login',component:LoginComponent},
    {path:'home',component:HomeComponent},
    {path:'cadUsuario',component:CadUsuarioComponent},
-   {path:'cadProduto',component:CadProdutoComponent}
+   {path:'cadProduto',component:CadProdutoComponent},
+   {path:'movProduto',component:MovProdutoComponent}
   ];
 
 @NgModule({
