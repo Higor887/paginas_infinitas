@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CadUsuarioComponent } from './cad-usuario/cad-usuario.component';
 import { CadProdutoComponent } from './cad-produto/cad-produto.component';
 import { MovProdutoComponent } from './mov-produto/mov-produto.component';
+import { provideHttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { MovProdutoComponent } from './mov-produto/mov-produto.component';
     FontAwesomeModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [provideHttpClient(),],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
