@@ -1,17 +1,20 @@
 <app-menu></app-menu>
 <section>
-  <form action="">
-    <div><label for="id">Id</label><input id="id" /></div>
-    <div><label for="nome">Nome</label><input id="nome" /></div>
-    <div><label for="valor">Valor</label><input id="valor" /></div>
-    <div><label for="Autor">Autor</label><input id="autor" /></div>
+  <form [formGroup]="formulario">
+    <div><label for="id">Id</label><input id="id"  formControlName ="id"/></div>
+    <div><label for="nome">Nome</label><input id="nome"  formControlName ="nome"/></div>
+    <div><label for="valor">Valor</label><input id="valor"  formControlName ="valor"/></div>
+    <div><label for="Autor">Autor</label><input id="autor"  formControlName ="autor"/></div>
 
-    <div><label for="descricao">Descrição</label><input id="descricao" /></div>
-    <div><label for="editora">Editora</label><input type="editora" /></div>
-    <div><label for="link">Link</label><input type="link" /></div>
+    <div><label for="descricao">Descrição</label><input id="descricao"  formControlName ="descricao"/></div>
+    <div><label for="editora">Editora</label><input type="editora" formControlName ="editora"/></div>
+    <div><label for="link">Link</label><input type="link" formControlName ="link"/></div>
     <div>
-      <button>Excluir</button>
     </div>
+    <div>
+      <button  (click)="onSave()">Salvar</button>
+      <button (click)="onCancelar()">Cancelar</button>
+  </div>
   </form>
   <table class="styled-table">
     <thead>

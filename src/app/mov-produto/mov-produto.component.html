@@ -1,13 +1,38 @@
 <app-menu></app-menu>
-<section><form action="">
-    <div><label for="id">Id</label><input id="id" type="number" /></div>
-    <div><label for="dt_movimentacao">Data movimentação</label><input id="dt_movimentacao" type="date" /></div>
-    <div><label for="produto">Produto</label><select name="produto" id="produto"> <option value="produto">Produto</option></select>
-   </div>
-    <div><label for="quantidade">Quantidade</label><input id="quantidade" type="number" /></div>
-    <div><label for="tipo">Tipo</label> <select name="tipo" id="tipo">
+<section>
+  <form [formGroup]="formulario">
+    <div>
+      <label for="id">Id</label>
+      <input id="id" type="number" formControlName="id" />
+    </div>
+    <div>
+      <label for="dt_movimentacao">Data movimentação</label>
+      <input
+        id="dt_movimentacao"
+        type="date"
+        formControlName="dt_movimentacao"
+      />
+    </div>
+    <div>
+      <label for="produto">Produto</label>
+      <select name="produto" id="produto" formControlName="produto">
+        <option value="produto">Produto</option>
+      </select>
+    </div>
+    <div>
+      <label for="quantidade">Quantidade</label>
+      <input id="quantidade" type="number" formControlName="quantidade" />
+    </div>
+    <div>
+      <label for="tipo">Tipo</label>
+      <select name="tipo" id="tipo" formControlName="tipo">
         <option value="">Tipo</option>
-    </select></div>
+      </select>
+    </div>
+    <div>
+      <button (click)="onSave()">Salvar</button>
+      <button (click)="onCancelar()">Cancelar</button>
+  </div>
   </form>
   <table class="styled-table">
     <thead>
@@ -32,5 +57,5 @@
         <td>produto</td>
       </tr>
     </tbody>
-</table>
-    </section>
+  </table>
+</section>

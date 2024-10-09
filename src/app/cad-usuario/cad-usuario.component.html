@@ -1,22 +1,21 @@
 <app-menu></app-menu>
 <section>
-    <h1>Cadastro de usuários</h1>
-    <form action="">
+    <form [formGroup]="formulario">
         
-        <div><label for="id">Id</label><input id="id"></div>
+        <div><label for="id">Id</label><input id="id" formControlName ="id" type="number"></div>
         <div>
-            <label for="nome">Nome</label><input id="nome">
-            <label for="sobrenome">Sobrenome</label><input id="sobrenome">
+            <label for="nome">Nome</label><input id="nome" formControlName ="nome">
+            <label for="sobrenome">Sobrenome</label><input id="sobrenome" formControlName ="sobrenome">
         </div>
         <div>
-            <label for="email">Email</label><input id="email">
-            <label for="senha">Senha</label><input id="senha">
+            <label for="email">Email</label><input id="email" formControlName ="email">
+            <label for="senha">Senha</label><input id="senha" formControlName ="senha">
         </div>
 
-        <div><label for="dt_nascimento">Dt Nascimento</label><input id="dt_nascimento" type="date"></div>
+        <div><label for="dt_nascimento">Dt Nascimento</label><input id="dt_nascimento" type="date" formControlName ="dt_nascimento"></div>
         <div>
-            <button>Salvar</button>
-            <button>Cancelar</button>
+            <button (click)="onSave()">Salvar</button>
+            <button (click)="onCancelar()">Cancelar</button>
         </div>
         </form>
         
