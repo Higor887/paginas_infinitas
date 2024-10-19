@@ -11,6 +11,11 @@
             <label for="email">Email</label><input id="email" formControlName ="email">
             <label for="senha">Senha</label><input id="senha" formControlName ="senha">
         </div>
+        <label>Tipo</label>
+        <select>
+            <option>Selecione</option>
+            <option *ngFor="let tipo of arrTipos" [value]="tipo.id_tipo">{{tipo.descricao}}</option>
+        </select>
 
         <div><label for="dt_nascimento">Dt Nascimento</label><input id="dt_nascimento" type="date" formControlName ="dt_nascimento"></div>
         <div>
